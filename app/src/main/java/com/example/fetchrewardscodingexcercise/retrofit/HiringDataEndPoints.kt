@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface HiringDataEndPoints {
 
     @GET("hiring.json")
-    fun getHiringData(): Call<HiringData>
+    fun getHiringData(): Call<List<HiringData>>
 }
