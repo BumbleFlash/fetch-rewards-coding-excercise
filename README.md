@@ -1,4 +1,6 @@
-# fetch-rewards-coding-excercise
+# Fetch Rewards Coding Excecise
+[![API](https://img.shields.io/badge/API-16%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[![Android CI](https://github.com/CUTR-at-USF/MUSER/workflows/Android%20CI/badge.svg)](https://github.com/CUTR-at-USF/MUSER/actions?query=workflow%3A%22Android+CI%22)
 
 Simple Android app that fetches data from an API. The app was developed as part of the coding excerise provided by Fetch Rewards. 
 
