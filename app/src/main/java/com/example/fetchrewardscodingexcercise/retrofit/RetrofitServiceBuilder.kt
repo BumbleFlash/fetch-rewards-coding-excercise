@@ -4,6 +4,9 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * The service builder class to initialize the base url and Http client to work with retrofit.
+ */
 object RetrofitServiceBuilder {
 
     private const val BASE_URL = "https://fetch-hiring.s3.amazonaws.com/"
