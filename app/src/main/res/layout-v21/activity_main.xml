@@ -28,13 +28,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:id="@+id/data_count_items"
             android:fontFamily="sans-serif-black"
             android:textSize="25sp"
             android:textColor="@color/black"
             android:layout_marginEnd="10sp"
-            android:layout_marginRight="10sp"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
