@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Fetch Rewards Coding Excercise</string>
+    <string name="app_name">Fetch Rewards Coding Exercise</string>
+    <string name="placeholder_id">204</string>
+    <string name="placeholder_list_id">4</string>
+    <string name="placeholder_name">Item 204</string>
 </resources>
