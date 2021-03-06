@@ -20,7 +20,8 @@
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:id="@+id/list_id"
-        android:layout_marginRight="10sp" />
+        android:layout_marginRight="10sp"
+        android:layout_marginEnd="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
