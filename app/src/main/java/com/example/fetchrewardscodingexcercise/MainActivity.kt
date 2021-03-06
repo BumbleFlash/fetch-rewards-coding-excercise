@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.fetchrewardscodingexcercise.adapter.HiringDataAdapter
 import com.example.fetchrewardscodingexcercise.model.HiringData
 import com.example.fetchrewardscodingexcercise.retrofit.HiringDataEndPoints
 import com.example.fetchrewardscodingexcercise.retrofit.RetrofitServiceBuilder
@@ -13,10 +16,11 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    private var recyclerView: RecyclerView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        recyclerView = findViewById(R.id.recyclerView)
         val request = RetrofitServiceBuilder.buildService(HiringDataEndPoints::class.java)
         val call = request.getHiringData()
 
@@ -42,6 +46,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setData(hiringDataList: List<HiringData>) {
-        HiringDataUtils.filterAndSortData(hiringDataList)
+        val filteredAndSortedData = HiringDataUtils.filterAndSortData(hiringDataList)
+        recyclerView?.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = HiringDataAdapter(filteredAndSortedData)
+        }
     }
 }
