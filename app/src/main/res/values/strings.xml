@@ -6,4 +6,5 @@
     <string name="data_set">Dataset</string>
     <string name="data_count"> %1$d items</string>
     <string name="thank_you">Thank you for using the app!</string>
+    <string name="coding_exam">CODING EXAMINATION</string>
 </resources>

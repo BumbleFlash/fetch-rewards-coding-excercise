@@ -1,4 +1,4 @@
-package com.example.fetchrewardscodingexcercise
+package com.example.fetchrewardscodingexcercise.activity
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fetchrewardscodingexcercise.R
 import com.example.fetchrewardscodingexcercise.adapter.HiringDataAdapter
 import com.example.fetchrewardscodingexcercise.model.HiringData
 import com.example.fetchrewardscodingexcercise.retrofit.HiringDataEndPoints
