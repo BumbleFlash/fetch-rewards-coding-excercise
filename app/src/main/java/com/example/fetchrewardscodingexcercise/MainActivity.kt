@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fetchrewardscodingexcercise.model.HiringData
 import com.example.fetchrewardscodingexcercise.retrofit.HiringDataEndPoints
 import com.example.fetchrewardscodingexcercise.retrofit.RetrofitServiceBuilder
+import com.example.fetchrewardscodingexcercise.utils.HiringDataUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,9 +27,8 @@ class MainActivity : AppCompatActivity() {
             ) {
                 if (response.isSuccessful) {
                     if (response.body() != null) {
-                        response.body()?.forEach {
-                            Log.d("Response", it.toString())
-                        }
+                        val hiringDataList = response.body() as List<HiringData>
+                        setData(hiringDataList)
                     }
                 }
             }
@@ -39,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun setData(hiringDataList: List<HiringData>) {
+        HiringDataUtils.filterAndSortData(hiringDataList)
     }
 }
