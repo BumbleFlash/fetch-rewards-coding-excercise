@@ -2,6 +2,7 @@ package com.example.fetchrewardscodingexcercise
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,10 +18,12 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
+    private var dataCount: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.recyclerView)
+        dataCount = findViewById(R.id.data_count)
         val request = RetrofitServiceBuilder.buildService(HiringDataEndPoints::class.java)
         val call = request.getHiringData()
 
@@ -47,6 +50,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setData(hiringDataList: List<HiringData>) {
         val filteredAndSortedData = HiringDataUtils.filterAndSortData(hiringDataList)
+        dataCount?.text = String.format(
+            resources.getString(R.string.data_count), filteredAndSortedData.size
+        )
         recyclerView?.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)

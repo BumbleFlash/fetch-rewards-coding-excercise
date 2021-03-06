@@ -3,4 +3,7 @@
     <string name="placeholder_id">204</string>
     <string name="placeholder_list_id">4</string>
     <string name="placeholder_name">Item 204</string>
+    <string name="data_set">Dataset</string>
+    <string name="data_count"> %1$d items</string>
+    <string name="thank_you">Thank you for using the app!</string>
 </resources>
