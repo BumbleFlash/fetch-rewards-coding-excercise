@@ -8,16 +8,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/placeholder_id"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_marginLeft="10sp"
         android:id="@+id/id"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
         android:layout_marginStart="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/placeholder_list_id"
-        android:textSize="30sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
         android:layout_centerHorizontal="true"
         android:id="@+id/list_id"
         android:layout_marginRight="10sp"
@@ -27,10 +31,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/placeholder_name"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:id="@+id/name"
+        android:fontFamily="monospace"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="10sp"
+        android:textColor="@color/black"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="10sp" />
 
