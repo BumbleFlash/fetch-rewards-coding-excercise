@@ -23,7 +23,7 @@
             android:textSize="25sp"
             android:textColor="@color/black"
             android:text="@string/data_set"
-            android:fontFamily="monospace"></TextView>
+            android:fontFamily="monospace" />
 
         <TextView
             android:layout_width="wrap_content"
