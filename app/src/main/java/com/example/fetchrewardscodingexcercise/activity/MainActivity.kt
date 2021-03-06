@@ -30,16 +30,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.recyclerView)
-        dataCount = findViewById(R.id.data_count)
+        dataCount = findViewById(R.id.data_count_items)
         progressBar = findViewById(R.id.progress)
         progressBar?.visibility = View.VISIBLE
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             progressBar?.indeterminateDrawable
                 ?.setColorFilter(
-                    ContextCompat.getColor(this, R.color.fr_yellow),
-                    PorterDuff.Mode.SRC_IN
-                );
+                        ContextCompat.getColor(this, R.color.fr_yellow),
+                        PorterDuff.Mode.SRC_IN
+                )
         }
 
         val request = RetrofitServiceBuilder.buildService(HiringDataEndPoints::class.java)
